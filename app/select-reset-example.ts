@@ -138,6 +138,15 @@ export class SelectResetExample {
     select.update.emit([]);
   }
 
+  selectGroup(group, select: NgModel) {
+    let values: any[] = []; 
+    for(let item of group.items){
+      values.push(item.value);
+    }
+    // if (group.items.length > 0) return values; 
+    select.update.emit(values);
+  }
+
   // On button click
   test() {
     console.log(this.modelGroup)

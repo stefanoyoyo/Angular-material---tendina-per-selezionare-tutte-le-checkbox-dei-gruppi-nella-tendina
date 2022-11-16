@@ -13,7 +13,7 @@
 		</mat-option>
 
     <!-- Loop through each group via the groups array -->
-		<mat-optgroup *ngFor="let group of groups" [label]="group.name">
+		<mat-optgroup *ngFor="let group of groups" [label]="group.name" (click)="selectGroup(group, itemSelect)">
 			<mat-option *ngFor="let item of group.items" [value]="item.value">
 				{{item.label}}
 			</mat-option>
